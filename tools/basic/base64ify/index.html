@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base64ify - Image Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Base64ify</h1>
+      <p>by Mc-Ben Ba-Ana Ostemobo</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="encode">Image ➜ Base64</button>
+      <button class="tab-button" data-tab="decode">Base64 ➜ Image</button>
+    </div>
+
+    <div id="encode" class="tab-content active">
+      <h2>Convert Image to Base64</h2>
+      <input type="file" id="imageInput" accept="image/*" />
+      <div class="preview">
+        <p>Image Preview:</p>
+        <img id="imagePreview" src="" alt="Preview" />
+      </div>
+      <textarea id="base64Output" readonly placeholder="Base64 output will appear here"></textarea>
+      <button id="downloadBase64">Download as .txt</button>
+    </div>
+
+    <div id="decode" class="tab-content">
+      <h2>Convert Base64 to Image</h2>
+      <textarea id="base64Input" placeholder="Paste base64 string here"></textarea>
+      <div class="preview">
+        <p>Decoded Image Preview:</p>
+        <img id="decodedImage" src="" alt="Decoded Image" />
+      </div>
+      <button id="downloadImage">Download Image</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

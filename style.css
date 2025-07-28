@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #1e293b;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: #111;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e2e8f0;
+  font-size: 0.9rem;
+}
