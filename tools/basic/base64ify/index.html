@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Base64ify - Image Converter</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64ify - Image to Base64 Converter</title>
+    <meta name="description" content="Convert images to Base64 and vice versa with this free online tool">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Base64ify</h1>
-      <p>by Mc-Ben Ba-Ana Ostemobo</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-exchange-alt"></i> Base64ify</h1>
+            <p class="tagline">Convert images to Base64 and back effortlessly</p>
+            <p class="developer">By Your Name</p>
+        </header>
 
-    <div class="tabs">
-      <button class="tab-button active" data-tab="encode">Image ➜ Base64</button>
-      <button class="tab-button" data-tab="decode">Base64 ➜ Image</button>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="image-to-base64">Image to Base64</button>
+            <button class="tab-button" data-tab="base64-to-image">Base64 to Image</button>
+        </div>
+
+        <div id="image-to-base64" class="tab-content active">
+            <div class="upload-area" id="drop-area">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Drag & Drop Image Here</h3>
+                <p>or</p>
+                <input type="file" id="file-input" accept="image/*">
+                <label for="file-input" class="browse-button">Browse Files</label>
+            </div>
+            
+            <div class="preview-section">
+                <div class="preview-container">
+                    <h3>Image Preview</h3>
+                    <div class="image-preview" id="image-preview"></div>
+                </div>
+                
+                <div class="result-container">
+                    <h3>Base64 Result</h3>
+                    <textarea id="base64-result" readonly placeholder="Your Base64 string will appear here..."></textarea>
+                    <button id="copy-base64" class="action-button">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="base64-to-image" class="tab-content">
+            <div class="input-area">
+                <h3>Paste Base64 String</h3>
+                <textarea id="base64-input" placeholder="Paste your Base64 image string here..."></textarea>
+                <button id="convert-to-image" class="action-button">
+                    <i class="fas fa-image"></i> Convert to Image
+                </button>
+            </div>
+            
+            <div class="result-section">
+                <div class="result-container">
+                    <h3>Image Result</h3>
+                    <div class="image-result" id="image-result"></div>
+                    <button id="download-image" class="action-button" disabled>
+                        <i class="fas fa-download"></i> Download Image
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year"></span> Your Name - Open Source Project</p>
+            <p class="github-link">
+                <a href="https://github.com/yourusername/base64ify" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </p>
+        </footer>
     </div>
 
-    <div id="encode" class="tab-content active">
-      <h2>Convert Image to Base64</h2>
-      <input type="file" id="imageInput" accept="image/*" />
-      <div class="preview">
-        <p>Image Preview:</p>
-        <img id="imagePreview" src="" alt="Preview" />
-      </div>
-      <textarea id="base64Output" readonly placeholder="Base64 output will appear here"></textarea>
-      <button id="downloadBase64">Download as .txt</button>
-    </div>
+    <div class="notification" id="notification"></div>
 
-    <div id="decode" class="tab-content">
-      <h2>Convert Base64 to Image</h2>
-      <textarea id="base64Input" placeholder="Paste base64 string here"></textarea>
-      <div class="preview">
-        <p>Decoded Image Preview:</p>
-        <img id="decodedImage" src="" alt="Decoded Image" />
-      </div>
-      <button id="downloadImage">Download Image</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
