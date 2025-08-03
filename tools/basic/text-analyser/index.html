@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character & Word Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-icon">📝</span>
+                Text Analyzer
+            </h1>
+            <p class="subtitle">Count characters, words, and estimate reading time</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="textarea-container">
+                    <textarea 
+                        id="textInput" 
+                        placeholder="Start typing or paste your text here..."
+                        spellcheck="true"
+                    ></textarea>
+                    <div class="textarea-actions">
+                        <button id="clearBtn" class="action-btn clear-btn" title="Clear text">
+                            <span class="btn-icon">🗑️</span>
+                            Clear
+                        </button>
+                        <button id="copyBtn" class="action-btn copy-btn" title="Copy text">
+                            <span class="btn-icon">📋</span>
+                            Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card primary">
+                        <div class="stat-icon">🔤</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="charCount">0</div>
+                            <div class="stat-label">Characters</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card secondary">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="charNoSpaces">0</div>
+                            <div class="stat-label">No Spaces</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card accent">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="wordCount">0</div>
+                            <div class="stat-label">Words</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card highlight">
+                        <div class="stat-icon">📖</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="readingTime">0</div>
+                            <div class="stat-label">Min Read</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional-stats">
+                    <div class="additional-grid">
+                        <div class="additional-stat">
+                            <span class="additional-label">Paragraphs:</span>
+                            <span class="additional-value" id="paragraphCount">0</span>
+                        </div>
+                        <div class="additional-stat">
+                            <span class="additional-label">Sentences:</span>
+                            <span class="additional-value" id="sentenceCount">0</span>
+                        </div>
+                        <div class="additional-stat">
+                            <span class="additional-label">Avg Words/Sentence:</span>
+                            <span class="additional-value" id="avgWordsPerSentence">0</span>
+                        </div>
+                        <div class="additional-stat">
+                            <span class="additional-label">Speaking Time:</span>
+                            <span class="additional-value" id="speakingTime">0 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-section">
+                <div class="tools-header">
+                    <h3>Text Tools</h3>
+                </div>
+                <div class="tools-grid">
+                    <button class="tool-btn" id="uppercaseBtn">
+                        <span class="tool-icon">🔤</span>
+                        UPPERCASE
+                    </button>
+                    <button class="tool-btn" id="lowercaseBtn">
+                        <span class="tool-icon">🔡</span>
+                        lowercase
+                    </button>
+                    <button class="tool-btn" id="capitalizeBtn">
+                        <span class="tool-icon">🔠</span>
+                        Capitalize
+                    </button>
+                    <button class="tool-btn" id="reverseBtn">
+                        <span class="tool-icon">🔄</span>
+                        Reverse
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Text Analyzer. Perfect for writers, students, and developers.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
